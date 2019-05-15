@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --header-color: #383838;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAACBJREFUKBVj/PTp038GUgCpGphIMRykdlQDMSE2CEMJAOX5B8AqzKL7AAAAAElFTkSuQmCC");
+    text-align: center;
+}
+#app{
+    display: inline-block;
+    text-align: left;
+    color: white;
+}
+#editor-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    background: #1E1E1E;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+#preview-wrapper{
+    min-height: 150px;
+    width: 800px;
+    background: #1E1E1E;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+.header{
+    background-color: var(--header-color);
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: capitalize;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.header > p{
+    display: inline-block;
+    margin-left: 5px;
+}
+#editor{
+    width: calc(100% - 20px);
+    flex: 1;
+    min-height: 150px;
+    padding: 10px;
+    resize: vertical;
+    border: none;
+    background: inherit;
+    color: inherit;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+#editor:focus{
+    outline: none;
+}
+#preview{
+    width: calc(100% - 20px);
+    padding: 10px;
+}
+
+.min-max-icon{
+    float: right;
+}
+.min-max-icon:hover{
+    cursor: pointer;
+    color: lightgray;
+}
+
+@media (max-width: 900px){
+    #app{
+        width: 90%;
+    }
+    #preview{
+        width: 100%;
+    }
+}
+@media (max-width: 650px){
+    #editor{
+        width: 90%;
+    }
+}
+
+blockquote {
+    border-left: 3px solid rgb(197, 214, 39);
+    color: white;
+    padding-left: 5px;
+    margin-left: 25px;
+}
+
+code {
+    background: white;
+    color: black;
+    padding: 1px 4px 2px 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+pre {
+    background: white;
+    padding: 5px 0 5px 5px;
+}
+
+#preview td, th{
+    border: 2px solid white;
+    padding: 2px;
+}
+
+#preview a{
+    color: rgb(126, 126, 250);
+}
+
+#preview li{
+    margin-left: 20px;
+}
+
+.max-view{
+    width: 90vw !important;
+    min-height: 90vh !important;
+}

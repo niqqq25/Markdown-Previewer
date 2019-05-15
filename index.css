@@ -4,6 +4,7 @@
 }
 :root{
     --header-color: #383838;
+    --background-color: #1E1E1E;
 }
 body{
     height: 100%;
@@ -20,14 +21,16 @@ body{
     display: flex;
     flex-direction: column;
     width: 600px;
-    background: #1E1E1E;
+    background: var(--background-color);
     margin: 20px auto;
     border-radius: 5px;
 }
 #preview-wrapper{
+    display: flex;
+    flex-direction: column;
     min-height: 150px;
     width: 800px;
-    background: #1E1E1E;
+    background: var(--background-color);
     border-radius: 5px;
     margin: 20px 0;
 }
@@ -49,7 +52,7 @@ body{
     flex: 1;
     min-height: 150px;
     padding: 10px;
-    resize: vertical;
+    resize: none;
     border: none;
     background: inherit;
     color: inherit;
@@ -61,7 +64,10 @@ body{
 }
 #preview{
     width: calc(100% - 20px);
+    flex: 1;
     padding: 10px;
+    overflow: auto;
+    word-wrap: break-word;
 }
 
 .min-max-icon{
@@ -74,15 +80,15 @@ body{
 
 @media (max-width: 900px){
     #app{
-        width: 90%;
+        width: 100%;
     }
-    #preview{
+    #preview-wrapper{
         width: 100%;
     }
 }
 @media (max-width: 650px){
-    #editor{
-        width: 90%;
+    #editor-wrapper{
+        width: 100%;
     }
 }
 
@@ -103,7 +109,9 @@ code {
 
 pre {
     background: white;
+    width: calc(100%-20px);
     padding: 5px 0 5px 5px;
+    overflow: hidden;
 }
 
 #preview td, th{
@@ -120,6 +128,6 @@ pre {
 }
 
 .max-view{
-    width: 90vw !important;
+    width: 100vw !important;
     min-height: 90vh !important;
 }

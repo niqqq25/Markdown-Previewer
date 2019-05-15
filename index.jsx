@@ -25,7 +25,7 @@ class App extends React.Component {
         super(props);
         this.state = {
             inputValue: "",
-            maxEditorView: true,
+            maxEditorView: false,
             maxPreviewView: false
         };
         this.handleInputChange = this.handleInputChange.bind(this);

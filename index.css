@@ -128,6 +128,6 @@ pre {
 }
 
 .max-view{
-    width: 100vw !important;
+    width: 100% !important;
     min-height: 90vh !important;
 }

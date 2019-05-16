@@ -44,7 +44,7 @@ class App extends React.Component {
     }
     render() {
         return(
-            <div>
+            <div id="app" className={(this.state.maxEditorView || this.state.maxPreviewView ? "max-view" : "")}>
                 <Editor shareInput={this.handleInputChange} maxView={this.state.maxEditorView} disabled={this.state.maxPreviewView ? true : false} setView={this.handleViewChange}/>
                 <Preview input={this.state.inputValue} maxView={this.state.maxPreviewView} disabled={this.state.maxEditorView ? true : false} setView={this.handleViewChange}/>
             </div>
@@ -127,5 +127,5 @@ function Header(props){
 
 ReactDOM.render(
     <App />,
-    document.getElementById('app')
+    document.body
 );
